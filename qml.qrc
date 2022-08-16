@@ -7,5 +7,6 @@
         <file>styles/main_page_styles.js</file>
         <file>components/OptionRow.qml</file>
         <file>images/1.jpg</file>
+        <file>scripts/FileIO.js</file>
     </qresource>
 </RCC>

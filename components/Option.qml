@@ -18,11 +18,11 @@ Item{
             hoverEnabled: true
             onEntered: () => container.color = root.bg_color
             onExited: () => container.color = '#ffffff'
-        Text {
-            id: text_item
-            color: '#333FFF'
-            text: root.option_text
-        }
+            Text {
+                id: text_item
+                color: '#333FFF'
+                text: !root.option_text ? "123" : root.option_text
+            }
         }
     }
 

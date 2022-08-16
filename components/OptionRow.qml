@@ -7,8 +7,7 @@ Item {
 
     GridLayout{
         id: options
-        readonly property int optionWidth: 150;
-        onParentChanged: () => console.error('resized');
+        readonly property int optionWidth: 20;
         columns: Math.max(Math.floor(parent.width / optionWidth), 1)
         rows: Math.max(Math.ceil(children.length / columns), 1)
         rowSpacing: 20
@@ -60,6 +59,17 @@ Item {
            Option {
                 option_text: "some test text"
             }
+
+           Component.onCompleted:{
+               //add elements in collection during runtime
+               for(let i = 0; i < 100; i++){
+                   var comp = Qt.createComponent("qrc:/components/Option.qml");
+                   comp.option_text = "123" + i + "asdabsaa";
+                   comp.createObject(options);
+               }
+
+               var object = Qt.createQmlObject('import QtQuick 2.0; ListElement { property string hour: "23" }', parent);
+           }
     }
 }
 

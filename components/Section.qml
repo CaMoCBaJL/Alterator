@@ -25,8 +25,8 @@ Item {
 
         }
 
-//        OptionRow{
+        OptionRow{
 
-//        }
+        }
     }
 }
