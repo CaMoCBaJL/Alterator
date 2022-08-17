@@ -1,32 +1,68 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.15
+import "qrc:/components"
+import fileio 1.0
 
 Item {
     id: root
-    property variant options
 
-    RowLayout {
-        Image {
-            source: "qrc:/images/1.jpg"
-            height: 50
-            width: 50
+    Grid{
+        Rectangle{
+            id: image
+            height: root.height * 0.8
+            width: root.width * 0.2
+            anchors.bottomMargin: 20
 
-            Component.onCompleted: {
-                height = root.height / 2;
-                width = root.width / 5;
+            Image {
+                source: "qrc:/images/1.jpg"
+                fillMode: Image.Stretch
+                anchors.fill: parent
+                sourceSize.width: parent.width
+                sourceSize.height: parent.height
             }
         }
 
-        Text {
+        Rectangle{
+            id: header
+            height: 40
+            width: header_text.width + 20
 
+            Text {
+                id: header_text
+                text: 'some section naming text'
+            }
         }
 
-        Text {
+        Rectangle {
+            id: description
+            height: 40
+            width: description_text.width + 30
 
+            Text {
+                id: description_text
+                text: 'some description text, may be reeeeeeeeeeeeeeeeeeeealy big'
+            }
         }
 
-        OptionRow{
+        Flow{
+            id: options
+            spacing: 20
+            width:
 
+            IOHelper{
+               id: helper
+            }
+
+            Component.onCompleted:{
+               //add elements in collection during runtime
+               for(let file of helper.getFilesFromDir('./')){
+                    let comp = Qt.createComponent("qrc:/components/Option.qml");
+
+                    if (comp.status === Component.Ready){
+                        comp.createObject(options, {option_text: file, bg_color: "green"})
+                    }
+                }
+            }
         }
     }
 }

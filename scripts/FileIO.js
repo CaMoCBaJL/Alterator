@@ -1,8 +1,15 @@
 .pragma library
 
-function func() {
+function getFilesInDir(pathToDir) {
 
    const fs = require("fs");
 
-    fs.
+   return fs.readdir(pathToDir, (err, files) => {
+                  if (err) {
+                      return;
+                  }
+
+                  return files;
+              }
+       );
 }

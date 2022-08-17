@@ -10,6 +10,8 @@ Window {
     title: qsTr("Hello World")
 
     MainPage{
-
+        id:mainPage
+        height: root.height
+        width: root.width
     }
 }

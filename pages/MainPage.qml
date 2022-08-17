@@ -6,26 +6,17 @@ Item{
     id:root
 
     ColumnLayout{
+        id: sections
         spacing: 20
 
-        Section{
+        Component.onCompleted: {
+            for(let i = 0; i < 5; i++){
+                let comp = Qt.createComponent("qrc:/components/Section.qml");
 
-        }
-
-        Section{
-
-        }
-
-        Section{
-
-        }
-
-        Section{
-
-        }
-
-        Section{
-
+                if (comp.status === Component.Ready){
+                    comp.createObject(sections, {height: root.height / 5, width: root.width})
+                }
+            }
         }
     }
 }
