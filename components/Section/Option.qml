@@ -25,15 +25,14 @@ Item{
                 text: root.option_text
 
                 //check why it doesn't work
-//                ColorAnimation {
-//                    from: "#ffffff"
-//                    to: "#333FFF"
-//                    duration: 4000
-//                }
+                ColorAnimation {
+                    from: "#ffffff"
+                    to: "#333FFF"
+                    duration: 4000
+                }
             }
         }
     }
 
-    Component.onCompleted: () => text_width = root.width
-
+    Component.onCompleted:() => text_width = root.width
 }
