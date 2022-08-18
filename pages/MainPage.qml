@@ -1,22 +1,22 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.15
 import "qrc:/components"
+import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 
-Item{
-    id:root
+ColumnLayout{
+    function sectionCount(){
+        return 5;
+    }
 
-    ColumnLayout{
-        id: sections
-        spacing: 20
+    id: root
+    spacing: 20
 
-        Component.onCompleted: {
-            for(let i = 0; i < 5; i++){
-                let comp = Qt.createComponent("qrc:/components/Section.qml");
-
-                if (comp.status === Component.Ready){
-                    comp.createObject(sections, {height: root.height / 5, width: root.width})
-                }
-            }
+    Component.onCompleted: {
+        for(let i = 0; i < sectionCount(); i++){
+            DynamicObjectCreator.createObject("qrc:/components/Section.qml",
+                                              root,
+                                              {height: root.height / sectionCount(), width: root.width});
         }
+
     }
 }
