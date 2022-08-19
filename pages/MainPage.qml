@@ -5,17 +5,24 @@ import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 
 ColumnLayout{
     function sectionCount(){
-        return 5;
+        return 0;
     }
 
     id: root
     spacing: 20
+    height: 1
+    width: 2
+
+    Section {
+        height: parent.height * 0.6
+        width: parent.width
+    }
 
     Component.onCompleted: {
         for(let i = 0; i < sectionCount(); i++){
             DynamicObjectCreator.createObject("qrc:/components/Section.qml",
                                               root,
-                                              {height: root.height / sectionCount(), width: root.width});
+                                              {height: root.height /sectionCount(), width: root.width});
         }
 
     }

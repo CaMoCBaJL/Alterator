@@ -4,14 +4,14 @@ import "qrc:/pages"
 
 Window {
     id: root
-    width: 640
-    height: 480
+    width: 600
+    height: 600
     visible: true
     title: qsTr("Hello World")
 
     MainPage{
-        id:mainPage
-        height: root.height
+        id: mainPage
+        height: root.height * 0.6
         width: root.width
     }
 }
