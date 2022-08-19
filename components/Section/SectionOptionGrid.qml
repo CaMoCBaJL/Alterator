@@ -1,31 +1,23 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import fileio 1.0
+import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 
-ListView{
+Flow{
     id: options
     width: parent.width
-    height: parent.height
-
+    spacing: 5
 
     IOHelper{
         id: helper
     }
 
     Component.onCompleted:{
-        helper.getFilesFromDir('/usr/share/aclocal').forEach(file =>
-            listModel.append({option_text: file, bg_color: "green"}));
-    }
-
-    model: ListModel{
-        id: listModel
-        property string option_text
-        property string bg_color
-    }
-
-    delegate: Option {
-        option_text: model.option_text
-        bg_color: model.bg_color
+        for (let file of helper.getFilesFromDir('/usr/share/aclocal')){
+            DynamicObjectCreator.createObject('qrc:/components/Section/Option.qml',
+                                              options,
+                                              {option_text: file, bg_color: "green"});
+        }
     }
 }
 

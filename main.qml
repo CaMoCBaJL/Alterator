@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import "qrc:/pages"
+import fileio 1.0
+import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 
 Window {
     id: root

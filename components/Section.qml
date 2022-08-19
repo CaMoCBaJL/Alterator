@@ -6,19 +6,22 @@ import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 
 Rectangle {
     id: root
+    width: parent.width
+    height: parent.height
 
     SectionImage{
         id: image
     }
 
-    ColumnLayout{
+    Column{
+        height: parent.height
+        width: parent.width - 20
         anchors.left: parent.left
-        anchors.leftMargin: image.width * 0.8 + 30
+        anchors.right: parent.right
+        anchors.leftMargin: image.width * 1.5
         anchors.top: parent.top
         anchors.topMargin: 10
         spacing: 10
-        width: parent.width
-        height: parent.height
 
         SectionHeader{
 
