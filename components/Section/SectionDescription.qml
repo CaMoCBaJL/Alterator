@@ -4,10 +4,11 @@ Rectangle {
     id: description
     height: description_text.height
     width: description_text.width
+    property string text
 
     Text {
         id: description_text
-        text: 'some description text, may be reeeeeeeeeeeeeeeeeeeealy big'
+        text: description.text
     }
 }
 

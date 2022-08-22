@@ -7,9 +7,8 @@
         <file>styles/main_page_styles.js</file>
         <file>images/1.png</file>
         <file>scripts/CreateObject.js</file>
-        <file>components/Section/SectionImage.qml</file>
         <file>components/Section/SectionHeader.qml</file>
         <file>components/Section/SectionDescription.qml</file>
-        <file>components/Section/SectionOptionGrid.qml</file>
+        <file>components/Section/SectionOptionFlow.qml</file>
     </qresource>
 </RCC>
