@@ -6,7 +6,7 @@ import "qrc:/components"
 import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 import fileio 1.0
 
-ColumnLayout{
+Column{
     function sectionCount(){
         return 5;
     }
@@ -22,31 +22,4 @@ ColumnLayout{
 
     }
 }
-
-//ListView{
-//        function sectionCount(){
-//            return 5;
-//        }
-
-//    id: sections
-//    anchors.top: parent.bottom
-//    anchors.bottom: parent.bottom
-//    anchors.left: parent.left
-//    anchors.right: parent.right
-
-//    delegate: Section {
-//    }
-
-//    model: ListModel{
-//        id: listModel
-//        property int height
-//        property int width
-//    }
-
-//    Component.onCompleted: {
-//        for (let i = 0; i < sectionCount(); i++){
-//            listModel.append({height: parent.height / sectionCount(), width: parent.width});
-//        }
-//    }
-//}
 

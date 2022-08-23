@@ -4,9 +4,9 @@ import "qrc:/components/Section"
 import fileio 1.0
 import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 import "qrc:/styles/main_page_styles.js" as Styles
-
-Rectangle {
-    id: root
+Item {
+    height: parent.height
+    width: parent.width
 
     Image {
         id: image
@@ -38,3 +38,4 @@ Rectangle {
         }
     }
 }
+

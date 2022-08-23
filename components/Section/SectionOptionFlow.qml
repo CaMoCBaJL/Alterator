@@ -6,17 +6,16 @@ import "qrc:/styles/main_page_styles.js" as Styles
 
 ScrollView{
     width: parent.width
+    height: parent.height / 2
 
     clip: true
     ScrollBar.vertical.policy: ScrollBar.AlwaysOn
-    contentHeight: 400
+    contentHeight: parent.height
 
     Flow{
         id: options
         spacing: Styles.option__spacing
         anchors.fill: parent
-//        height: parent.height
-//        width: parent.width
 
         IOHelper{
             id: helper
@@ -32,6 +31,8 @@ ScrollView{
             console.warn(options.children.length);
         }
     }
+
+    ScrollBar{}
 }
 
 
