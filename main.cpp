@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include "Auxillary/fileio.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     app.setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
+    qmlRegisterType<FileIO>("fileio", 1, 0, "IOHelper");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));

@@ -17,10 +17,11 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
 set(PROJECT_SOURCES
         main.cpp
         qml.qrc
+        Auxillary/fileio.cpp
 )
+set(PROJECT_HEADERS
+    Auxillary/fileio.h)
 
-set (RESOURCES
-)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Alterator

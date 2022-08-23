@@ -2,10 +2,13 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>pages/MainPage.qml</file>
-        <file>components/Option.qml</file>
+        <file>components/Section/Option.qml</file>
         <file>components/Section.qml</file>
         <file>styles/main_page_styles.js</file>
-        <file>components/OptionRow.qml</file>
-        <file>images/1.jpg</file>
+        <file>images/1.png</file>
+        <file>scripts/CreateObject.js</file>
+        <file>components/Section/SectionHeader.qml</file>
+        <file>components/Section/SectionDescription.qml</file>
+        <file>components/Section/SectionOptionFlow.qml</file>
     </qresource>
 </RCC>
