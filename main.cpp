@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<FileIO>("fileio", 1, 0, "IOHelper");
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/root.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)

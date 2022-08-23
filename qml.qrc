@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
+        <file>root.qml</file>
         <file>pages/MainPage.qml</file>
         <file>components/Section/Option.qml</file>
         <file>components/Section.qml</file>
-        <file>styles/main_page_styles.js</file>
+        <file>styles/styles.js</file>
         <file>images/1.png</file>
         <file>scripts/CreateObject.js</file>
         <file>components/Section/SectionHeader.qml</file>

@@ -3,11 +3,12 @@ import QtQuick.Layouts 1.15
 import "qrc:/components/Section"
 import fileio 1.0
 import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
-import "qrc:/styles/main_page_styles.js" as Styles
+import "qrc:/styles/styles.js" as Styles
 Item {
     height: parent.height
     width: parent.width
 
+    //TODO: remove mock img source
     Image {
         id: image
         source: "qrc:/images/1.png"
@@ -24,7 +25,7 @@ Item {
         anchors.top: parent.top
         anchors.topMargin: Styles.elem__margin
         spacing: Styles.option__spacing
-
+        //TODO: remove mock texts
         SectionHeader{
             text: 'some section naming text'
         }

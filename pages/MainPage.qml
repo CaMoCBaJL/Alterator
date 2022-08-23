@@ -7,12 +7,12 @@ import "qrc:/scripts/CreateObject.js" as DynamicObjectCreator
 import fileio 1.0
 
 Column{
+    //mock data
     function sectionCount(){
         return 5;
     }
 
     id: sections
-    spacing: 20
 
     Component.onCompleted: {
         for(let i = 0; i < sectionCount(); i++){
