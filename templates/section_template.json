@@ -1,0 +1,10 @@
+{
+	name_ru: "section name ru",
+	name_uk: "section name uk",
+	name_br: "section name br",
+	description_ru: "section description ru",
+	description_uk: "section description uk",
+	description_br: "section description br",
+	icon: "path to icon"
+}
+
