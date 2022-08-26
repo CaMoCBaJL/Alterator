@@ -1,0 +1,7 @@
+{
+	"name_ru": "Информация о дистрибутиве",
+	"name_uk": "Distribution Information",
+	"name_br": "Informations sur la distribution",
+	"root_file": "sys_info.qml",
+	"section_name": "System"
+}
