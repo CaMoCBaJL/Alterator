@@ -1,0 +1,9 @@
+{
+	"name_ru": "Система",
+	"name_uk": "System",
+	"name_br": "Système",
+	"description_ru": "Информация об установленной системе и её настройка",
+	"description_uk": "Information about the installed system and its settings",
+	"description_br": "Informations sur le système installé et ses paramètres",
+	"icon": "./desktop.png"
+}

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>DbusInterface.qml</file>
+    </qresource>
+</RCC>
